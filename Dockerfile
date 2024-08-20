@@ -17,7 +17,7 @@ COPY pom.xml .
 COPY src ./src
 
 # Run the maven build and skip the tests
-RUN mvn clean install package -DskipTests
+RUN mvn clean package -DskipTests
 
 # Second stage uses openjdk image to run the application
 FROM openjdk:21-slim
